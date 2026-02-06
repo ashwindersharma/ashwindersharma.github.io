@@ -138,3 +138,58 @@ h2 {
   margin-bottom: 10px; /* keep a little space before projects */
   display: block;
 }
+/* ======================
+   PRINT / PDF FIX
+====================== */
+@media print {
+
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  body {
+    background: white;
+    padding: 0;
+    margin: 0;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  /* Fix grid breaking */
+  .grid {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    gap: 20px;
+  }
+
+  /* Prevent awkward page breaks */
+  section,
+  .company,
+  .project {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Text & link cleanup */
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  /* Reduce font slightly for PDF */
+  body,
+  p,
+  li {
+    font-size: 13px;
+  }
+
+  h1 { font-size: 22px; }
+  h2 { font-size: 15px; }
+  h3 { font-size: 14px; }
+  h4 { font-size: 13px; }
+}
