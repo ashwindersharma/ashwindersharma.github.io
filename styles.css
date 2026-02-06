@@ -178,6 +178,9 @@ h2 {
     grid-template-columns: 65% 35%;
     gap: 20px;
   }
+.grid {
+    align-items: start;
+  }
 
   /* Prevent awkward page breaks */
  
