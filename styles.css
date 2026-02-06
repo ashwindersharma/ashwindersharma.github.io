@@ -180,10 +180,12 @@ h2 {
   }
 
   /* Prevent awkward page breaks */
-  section,
-  .company,
+ 
+   .company {
+    page-break-inside: avoid;
+  }
+
   .project {
-    break-inside: avoid;
     page-break-inside: avoid;
   }
 
