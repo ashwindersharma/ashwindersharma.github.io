@@ -145,68 +145,36 @@ h2 {
 
   @page {
     size: A4;
-    margin: 15mm ; /* TOP RIGHT BOTTOM LEFT */
-  }
-
-
-   * {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
-
-  .tags span {
-    background: #0f2a44 !important;
-    color: #ffffff !important;
-    border: 1px solid #0f2a44;
+    margin: 15mm;
   }
 
   body {
-    background: white;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    background: white;
   }
 
   .container {
-    max-width: 100%;
-    padding: 0;
     box-shadow: none;
+    padding: 0;
   }
 
-  /* Fix grid breaking */
   .grid {
     display: grid;
     grid-template-columns: 65% 35%;
     gap: 20px;
-  }
-.grid {
     align-items: start;
   }
 
-  /* Prevent awkward page breaks */
- 
-   .company {
-    page-break-inside: avoid;
-  }
-
+  /* Keep logical blocks together */
+  .company,
   .project {
     page-break-inside: avoid;
   }
 
-  /* Text & link cleanup */
-  a {
-    color: black;
-    text-decoration: none;
+  /* Allow natural section breaks */
+  section {
+    page-break-inside: auto;
   }
 
-  /* Reduce font slightly for PDF */
-  body,
-  p,
-  li {
-    font-size: 13px;
-  }
-
-  h1 { font-size: 22px; }
-  h2 { font-size: 15px; }
-  h3 { font-size: 14px; }
-  h4 { font-size: 13px; }
 }
