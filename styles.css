@@ -145,7 +145,7 @@ h2 {
 
   @page {
     size: A4;
-    margin: 15mm 15mm 18mm 15mm; /* TOP RIGHT BOTTOM LEFT */
+    margin: 15mm ; /* TOP RIGHT BOTTOM LEFT */
   }
 
 
