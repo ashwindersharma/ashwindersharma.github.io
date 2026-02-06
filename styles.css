@@ -148,6 +148,18 @@ h2 {
     margin: 12mm;
   }
 
+
+   * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .tags span {
+    background: #0f2a44 !important;
+    color: #ffffff !important;
+    border: 1px solid #0f2a44;
+  }
+  
   body {
     background: white;
     padding: 0;
