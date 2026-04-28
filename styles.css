@@ -85,7 +85,7 @@ h2 {
   background: #0f2a44;
   color: #fff;
   padding: 6px 10px;
-  margin: 5px 5px 0 0;
+  margin: 4px 4px 1px 1px;
   border-radius: 20px;
   font-size: 12px;
 }
@@ -145,36 +145,70 @@ h2 {
 
   @page {
     size: A4;
-    margin: 15mm;
+    margin: 8mm;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
   }
 
   body {
-    margin: 0;
-    padding: 0;
+    zoom: 0.92;
     background: white;
   }
 
   .container {
-    box-shadow: none;
+    margin: 0;
     padding: 0;
+    max-width: 100%;
+  }
+
+  .header {
+    display: flex;
+    gap: 15px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+
+    /* REMOVE PAGE BREAK ISSUE */
+    page-break-after: avoid;
+    break-after: avoid;
   }
 
   .grid {
     display: grid;
-    grid-template-columns: 65% 35%;
-    gap: 20px;
-    align-items: start;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    margin-top: 10px;
   }
 
-  /* Keep logical blocks together */
-  .company,
+  /* .company,
   .project {
     page-break-inside: avoid;
+    break-inside: avoid;
+  } */
+.company {
+  page-break-inside: auto;
+  break-inside: auto;
+}
+
+.project {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+  section {
+    margin-bottom: 15px;
   }
 
-  /* Allow natural section breaks */
-  section {
-    page-break-inside: auto;
+  h1,h2,h3,h4,p,li {
+    margin-top: 0;
+  }
+
+  li {
+    font-size: 13px;
+    line-height: 1.35;
   }
 
 }
